@@ -36,6 +36,30 @@ var inputLower = confirm("Would you like lower case letters in your password?")
 var inputUpper = confirm("Would you like upper case letters in your password?")
 var inputSpecial = confirm("Would you like special letters in your password?")
 var inputNumber = confirm("Would you like numbers in your password?")
+var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128")
+
+// Create a for loop for the number of times there is a character choice
+var allInputs = [];
+var EmployeeInputs = //ALL ABOVE--HOW????//
+AllInputs.push(EmployeeInputs)
+
+
+
+
+
+
+
+
+//if inputLower === true {
+    //put into new array--review...
+
+//}
+
+
+
+
+
+
 
 // Assignment Code---DOES THIS CORRESPOND WITH THE BUTTON???
 var generateBtn = document.querySelector("#generate");
@@ -52,8 +76,9 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 //-----------------------//
+
 //#Pseudo Code//
-//1. Create a button to "Generate a new secure password"//
+
 //2. Prompt the employee "Would you like to include Upper Case Letters?"(y/n)
 //3. Prompt the employee "Would you like to include Lower Case Letters?" (y/n)
 //4. Prompt the employee "Would you like to include Numbers?" (y/n)
@@ -69,6 +94,6 @@ generateBtn.addEventListener("click", writePassword);
 //populate new array with selection
 //18. create an if statment if upperCase() returns y/n (true/false)
 //populate new array with selection
-//19.  Create a for loop for the number of times there is a character choice
+//
 //20. For each loop generate a random character from the NEW ARRAY
 //21. Concatinate a new string onto page in the correct div
