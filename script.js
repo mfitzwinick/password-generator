@@ -14,7 +14,7 @@ var inputNumber = confirm("Would you like numbers in your password?")
 var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128")
 var generateBtn = document.querySelector("#generate");
 var allInputs = [];
-var passwordText; 
+var passwordText = document.body.//WHAT GOES HERE??????//
 //check inputs//
 console.log(inputLower)
 console.log(inputUpper)
@@ -35,38 +35,45 @@ if (inputSpecial === true) {
 if (inputNumber === true) {
   allInputs.push(numeric)
 };
+if (inputAmount < 8) {
+  alert ("You much choose a number greater than 7");
+  var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128)?");
+}; //NEED TO ADD A LOOP HERE//
+if (inputAmount > 128) {
+  alert ("You much choose a number less than 129");
+  var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128)?");
+}; //NEED TO ADD A LOOP HERE//
+
 //check final array//
 console.log(allInputs)
 //check prompt//
 console.log(inputAmount)
 
-//console.log(allInputs[Math.floor(Math.random() * allInputs.length)])
+// HOW DO I CIRCLE THE FOR LOOP INTO EACH CHAR?????//
 function generatePassword() {
-  var passwordText; 
-  for (var i = 0; i < inputAmount; i++) {
-   //var randomSelection = Math.floor(Math.random() * allInputs.length)
-   passwordText.push(allInputs[Math.floor(Math.random() * allInputs.length[0])
-  }
-  return passwordText.toString() //usejoin
-}
+      for (var i = 0; i < inputAmount; i++) {
+      passwordText.push(allInputs[Math.floor(Math.random() * allInputs.length[0])
+   }
+//   return passwordText.toString() //usejoin
+// }
 
 
 
-// Assignment Code---DOES THIS CORRESPOND WITH THE BUTTON???
+// // Assignment Code---DOES THIS CORRESPOND WITH THE BUTTON???
 
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-//-----------------------//
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
+// //-----------------------//
 
 //#Pseudo Code//
 
