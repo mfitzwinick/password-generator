@@ -6,6 +6,7 @@ var specialChar = ['@','%','+',"\\",'/',"'",'!','#','$','^','?',':',',',')','(',
 '}','{',']','[','~','-','_','.'];
 //welcome employee//
 alert ("Thank you for using Password Generator!")
+function generatePassword() {
 //create variables for inputs with confirms and prompt//
 var inputLower = confirm("Would you like lower case letters in your password?")
 var inputUpper = confirm("Would you like upper case letters in your password?")
@@ -14,7 +15,7 @@ var inputNumber = confirm("Would you like numbers in your password?")
 var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128")
 var generateBtn = document.querySelector("#generate");
 var allInputs = [];
-var passwordText = [];
+var passwordText = "";
 //check inputs//
 console.log(inputLower)
 console.log(inputUpper)
@@ -24,16 +25,21 @@ console.log(inputAmount)
 
 //create if statments//
 if (inputLower ===true) {
-  allInputs.push(lowercase)
+  for (var i =0; i<lowercase.length; i++) {
+    allInputs.push(lowercase[i])
+  }
 };
 if (inputUpper ===true) {
-  allInputs.push(uppercase)
+  for (var i =0; i<uppercase.length; i++) {
+  allInputs.push(uppercase[i])
 };
 if (inputSpecial === true) {
-  allInputs.push(specialChar)
+  for (var i =0; i<specialChar.length; i++) {
+  allInputs.push(specialChar[i])
 };
 if (inputNumber === true) {
-  allInputs.push(numeric)
+  for (var i =0; i<casenumeric.length; i++) {
+  allInputs.push(numeric[i])
 };
 if (inputAmount < 8) {
   alert ("You much choose a number greater than 7");
@@ -48,25 +54,29 @@ if (inputAmount > 128) {
 console.log(allInputs)
 //check prompt//
 console.log(inputAmount)
-// //-----------------------------------------------ARG!
-var passwordBtn = document.querySelector("#generate");
-  passwordBtn.addEventListener("click", 
-    function generatePassword() {
-      for (var i = 0; i < inputAmount; i++) {
-      passwordText.push(allInputs[Math.floor(Math.random() * inputAmount.length) 
-        return String.concat
+// // //-----------------------------------------------ARG!
+   
+     for (var i = 0; i < inputAmount; i++) {
+      passwordText += allInputs[Math.floor(Math.random() * inputAmount)] 
       };
- //----------------------------------------------------------//
-   // HOW DO I CIRCLE THE FOR LOOP INTO EACH CHAR?????//
-//   return passwordText.toString() //usejoin
-// }
+      return passwordText;
+    };
+//  //----------------------------------------------------------//
+//    // HOW DO I CIRCLE THE FOR LOOP INTO EACH CHAR?????//
+// //   return passwordText.toString() //usejoin
+ //}
 
 // // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
+function writePassword() {
+  var password = generatePassword();
+  var passwordFinal = document.querySelector("#password");
+  passwordFinal.value = password;
+};
+var passwordBtn = document.querySelector("#generate");
+  passwordBtn.addEventListener("click", function () {
+writePassword ()
+  });
 
-//   passwordText.value = password;
 
 // //-----------------------//
 
