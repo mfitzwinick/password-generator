@@ -14,7 +14,7 @@ var inputNumber = confirm("Would you like numbers in your password?")
 var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128")
 var generateBtn = document.querySelector("#generate");
 var allInputs = [];
-var passwordText = document.body.//WHAT GOES HERE??????//
+var passwordText = [];
 //check inputs//
 console.log(inputLower)
 console.log(inputUpper)
@@ -48,19 +48,18 @@ if (inputAmount > 128) {
 console.log(allInputs)
 //check prompt//
 console.log(inputAmount)
-
-// HOW DO I CIRCLE THE FOR LOOP INTO EACH CHAR?????//
-function generatePassword() {
+// //-----------------------------------------------ARG!
+var passwordBtn = document.querySelector("#generate");
+  passwordBtn.addEventListener("click", 
+    function generatePassword() {
       for (var i = 0; i < inputAmount; i++) {
-      passwordText.push(allInputs[Math.floor(Math.random() * allInputs.length[0])
-   }
+      passwordText.push(allInputs[Math.floor(Math.random() * inputAmount.length) 
+        return String.concat
+      };
+ //----------------------------------------------------------//
+   // HOW DO I CIRCLE THE FOR LOOP INTO EACH CHAR?????//
 //   return passwordText.toString() //usejoin
 // }
-
-
-
-// // Assignment Code---DOES THIS CORRESPOND WITH THE BUTTON???
-
 
 // // Write password to the #password input
 // function writePassword() {
@@ -69,29 +68,10 @@ function generatePassword() {
 
 //   passwordText.value = password;
 
-// }
-
-// // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
 // //-----------------------//
 
 //#Pseudo Code//
 
-//2. Prompt the employee "Would you like to include Upper Case Letters?"(y/n)
-//3. Prompt the employee "Would you like to include Lower Case Letters?" (y/n)
-//4. Prompt the employee "Would you like to include Numbers?" (y/n)
-//5. Prompt the employee "Would you like to include Special Characters?" (y/n)
-//6. Create a prompt "How many characters would you like your password to be?/r 
-//Must be between 8 and 128 characters" 
-
-//15. create an if statment if upperCase() returns y/n (true/false)
-//populate new array with selection
-//16. create an if statment if upperCase() returns y/n(true/false)
-//populate new array with selection
-//17. create an if statment if upperCase() returns y/n (true/false)
-//populate new array with selection
-//18. create an if statment if upperCase() returns y/n (true/false)
-//populate new array with selection
-//
+//LEFT TO COMPLETE//
 //20. For each loop generate a random character from the NEW ARRAY
-//21. Concatinate a new string onto page in the correct div
+//21. Concatinate a new string onto page in the correct 
