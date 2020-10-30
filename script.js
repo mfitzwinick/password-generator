@@ -1,37 +1,12 @@
-
-// Create and array for Upper Case
-//Create and array for Lower Case
-// Create and array for Numbers
-// Create and array for Special Characters
-// create a var for upper case input
-// create a var for lower case input
-// create a var for number input
-// create a var for special char input
+//Create arrays//
 var lowercase = ["a","b","c","d","e", "f","g","h","i","j","k","l","o","m","n","p","q","r", "s","t","u","v","w", "x","y","z"]
 var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","O","M","N","P","R", "S","T","U","V","W","X","Y","Z"]
 var numeric = ["1","2","3","4","5","6","7","8","9"]
-var specialChar = ['@','%',  '+',"\\",
-    '/',
-    "'",
-    '!',
-    '#',
-    '$',
-    '^',
-    '?',
-    ':',
-    ',',
-    ')',
-    '(',
-    '}',
-    '{',
-    ']',
-    '[',
-    '~',
-    '-',
-    '_',
-    '.'
-  ];
+var specialChar = ['@','%','+',"\\",'/',"'",'!','#','$','^','?',':',',',')','(',
+'}','{',']','[','~','-','_','.'];
+//welcome employee//
 alert ("Thank you for using Password Generator!")
+//create variables for inputs with confirms and prompt//
 var inputLower = confirm("Would you like lower case letters in your password?")
 var inputUpper = confirm("Would you like upper case letters in your password?")
 var inputSpecial = confirm("Would you like special letters in your password?")
@@ -39,32 +14,38 @@ var inputNumber = confirm("Would you like numbers in your password?")
 var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128")
 var generateBtn = document.querySelector("#generate");
 var allInputs = [];
-//AllInputs.push(EmployeeInputs)
-
-// Create a for loop for the number of times there is a character choice
-// 
-// var EmployeeInputs = //ALL ABOVE--HOW????//
-// 
+var passwordText; 
+//check inputs//
+console.log(inputLower)
+console.log(inputUpper)
+console.log(inputSpecial)
+console.log(inputNumber)
 console.log(inputAmount)
 
+//create if statments//
 if (inputLower ===true) {
   allInputs.push(lowercase)
-}
+};
 if (inputUpper ===true) {
   allInputs.push(uppercase)
-}
+};
 if (inputSpecial === true) {
   allInputs.push(specialChar)
-}
+};
 if (inputNumber === true) {
   allInputs.push(numeric)
-}
-console.log(allInputs[Math.floor(Math.random() * allInputs.length)])
+};
+//check final array//
+console.log(allInputs)
+//check prompt//
+console.log(inputAmount)
+
+//console.log(allInputs[Math.floor(Math.random() * allInputs.length)])
 function generatePassword() {
-  var passwordText = []; 
+  var passwordText; 
   for (var i = 0; i < inputAmount; i++) {
    //var randomSelection = Math.floor(Math.random() * allInputs.length)
-   passwordText.push(allInputs[Math.floor(Math.random() * allInputs.length)])
+   passwordText.push(allInputs[Math.floor(Math.random() * allInputs.length[0])
   }
   return passwordText.toString() //usejoin
 }
