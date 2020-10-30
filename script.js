@@ -5,12 +5,12 @@ var numeric = ["1","2","3","4","5","6","7","8","9"]
 var specialChar = ['@','%','+',"\\",'/',"'",'!','#','$','^','?',':',',',')','(',
 '}','{',']','[','~','-','_','.'];
 //welcome employee//
-alert ("Thank you for using Password Generator!\r\nPlease answer the following questions")
+alert ("Thank you for using Password Generator!\r\nPlease answer the following questions:")
 
 //create variables for inputs with confirms and prompt//
 var inputLower = confirm("Would you like lower case letters in your password?")
 var inputUpper = confirm("Would you like upper case letters in your password?")
-var inputSpecial = confirm("Would you like special letters in your password?")
+var inputSpecial = confirm("Would you like special characters in your password?")
 var inputNumber = confirm("Would you like numbers in your password?")
 var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128")
 var generateBtn = document.querySelector("#generate");
@@ -44,7 +44,7 @@ if (inputNumber === true) {
 
 if (inputAmount < 8|| inputAmount>128) {
   alert ("You must choose a number between 8 and 128");
-  var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128)?");
+  var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
 };
 alert ("Press the RED BUTTON to Generate your PASSWORD")
 function generatePassword() {
