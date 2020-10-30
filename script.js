@@ -5,8 +5,8 @@ var numeric = ["1","2","3","4","5","6","7","8","9"]
 var specialChar = ['@','%','+',"\\",'/',"'",'!','#','$','^','?',':',',',')','(',
 '}','{',']','[','~','-','_','.'];
 //welcome employee//
-alert ("Thank you for using Password Generator!")
-function generatePassword() {
+alert ("Thank you for using Password Generator!\r\nPlease answer the following questions")
+
 //create variables for inputs with confirms and prompt//
 var inputLower = confirm("Would you like lower case letters in your password?")
 var inputUpper = confirm("Would you like upper case letters in your password?")
@@ -31,24 +31,24 @@ if (inputLower ===true) {
 };
 if (inputUpper ===true) {
   for (var i =0; i<uppercase.length; i++) {
-  allInputs.push(uppercase[i])
+  allInputs.push(uppercase[i])};
 };
 if (inputSpecial === true) {
   for (var i =0; i<specialChar.length; i++) {
-  allInputs.push(specialChar[i])
+  allInputs.push(specialChar[i])};
 };
 if (inputNumber === true) {
-  for (var i =0; i<casenumeric.length; i++) {
-  allInputs.push(numeric[i])
+  for (var i =0; i<numeric.length; i++) {
+  allInputs.push(numeric[i])};
 };
-if (inputAmount < 8) {
-  alert ("You much choose a number greater than 7");
+
+if (inputAmount < 8|| inputAmount>128) {
+  alert ("You must choose a number between 8 and 128");
   var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128)?");
-}; //NEED TO ADD A LOOP HERE//
-if (inputAmount > 128) {
-  alert ("You much choose a number less than 129");
-  var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128)?");
-}; //NEED TO ADD A LOOP HERE//
+};
+alert ("Press the RED BUTTON to Generate your PASSWORD")
+function generatePassword() {
+
 
 //check final array//
 console.log(allInputs)
@@ -60,6 +60,7 @@ console.log(inputAmount)
       passwordText += allInputs[Math.floor(Math.random() * inputAmount)] 
       };
       return passwordText;
+      alert ("Here is your new SECURE PASSWORD")
     };
 //  //----------------------------------------------------------//
 //    // HOW DO I CIRCLE THE FOR LOOP INTO EACH CHAR?????//
