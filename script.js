@@ -42,7 +42,7 @@ if (inputNumber === true) {
   allInputs.push(numeric[i])};
 };
 
-if (inputAmount < 8|| inputAmount>128) {
+if (inputAmount<8||inputAmount >128||inputAmount) {
   alert ("You must choose a number between 8 and 128");
   var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
 };
