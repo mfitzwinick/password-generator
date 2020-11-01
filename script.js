@@ -16,6 +16,9 @@ var inputAmount = prompt ("How many characters would you like to include in your
 var generateBtn = document.querySelector("#generate");
 var allInputs = [];
 var passwordText = "";
+
+var chosenRangeLower = inputAmount > 7
+var chosenRangeHigher = inputAmount <128
 //check inputs//
 console.log(inputLower)
 console.log(inputUpper)
@@ -23,7 +26,7 @@ console.log(inputSpecial)
 console.log(inputNumber)
 console.log(inputAmount)
 
-//create if statments//
+//create conditional statements//
 if (inputLower ===true) {
   for (var i =0; i<lowercase.length; i++) {
     allInputs.push(lowercase[i])
@@ -42,32 +45,30 @@ if (inputNumber === true) {
   allInputs.push(numeric[i])};
 };
 
-if (inputAmount<8||inputAmount >128||inputAmount) {
+if (inputAmount!== chosenRangeLower || inputAmount!== chosenRangeHigher) {
   alert ("You must choose a number between 8 and 128");
   var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
 };
-alert ("Press the RED BUTTON to Generate your PASSWORD")
-function generatePassword() {
-
-
-//check final array//
+if (inputAmount<8||inputAmount >128) {
+  alert ("You must choose a number between 8 and 128");
+  var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+};
+ 
+ //check final array//
 console.log(allInputs)
 //check prompt//
 console.log(inputAmount)
-// // //-----------------------------------------------ARG!
-   
+
+//create function to randomly select characters in final array using a look and Math.random//
+  function generatePassword() {
      for (var i = 0; i < inputAmount; i++) {
       passwordText += allInputs[Math.floor(Math.random() * inputAmount)] 
       };
       return passwordText;
-      alert ("Here is your new SECURE PASSWORD")
+      alert ("Press the RED BUTTON to Generate your PASSWORD")
     };
-//  //----------------------------------------------------------//
-//    // HOW DO I CIRCLE THE FOR LOOP INTO EACH CHAR?????//
-// //   return passwordText.toString() //usejoin
- //}
 
-// // Write password to the #password input
+// // Write password to the #password input div //
 function writePassword() {
   var password = generatePassword();
   var passwordFinal = document.querySelector("#password");
@@ -79,10 +80,3 @@ writePassword ()
   });
 
 
-// //-----------------------//
-
-//#Pseudo Code//
-
-//LEFT TO COMPLETE//
-//20. For each loop generate a random character from the NEW ARRAY
-//21. Concatinate a new string onto page in the correct 

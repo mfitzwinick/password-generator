@@ -2,7 +2,7 @@
 
 The objective of this project was to create a password generator.  This can be used by an employee (or any other member of the user group). The user can select whether or not they would like to include uppercase letters, lowercase letters, special characters or numbers. They will also select how many characters should be included in the generated password. The length of the password will have to be at least 8 characters long, but cannot exceed 128 characters.
 
-Once selections are made, they will be able to generate a random password based upon their choices.  In this particular case, I used alerts, confirms, and prompts to communicate with the user.
+Once selections are made, they will be able to generate a random password based upon their choices.  In this particular case, I used alerts, confirms, and prompts to communicate with the user.  I don't think this is the most effective way to communicate with the user, but, for the purposes of this project, they are usable tools that seemed tp fulfill the parameters of the project.
 
 # How to Access the Work
 
