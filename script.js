@@ -1,11 +1,13 @@
+
+//welcome employee//
+alert ("Thank you for using Password Generator!\r\nPlease answer the following questions:")
+
 //Create arrays//
 var lowercase = ["a","b","c","d","e", "f","g","h","i","j","k","l","o","m","n","p","q","r", "s","t","u","v","w", "x","y","z"]
 var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","O","M","N","P","R", "S","T","U","V","W","X","Y","Z"]
 var numeric = ["1","2","3","4","5","6","7","8","9"]
 var specialChar = ['@','%','+',"\\",'/',"'",'!','#','$','^','?',':',',',')','(',
 '}','{',']','[','~','-','_','.'];
-//welcome employee//
-alert ("Thank you for using Password Generator!\r\nPlease answer the following questions:")
 
 //create variables for inputs with confirms and prompt//
 var inputLower = confirm("Would you like lower case letters in your password?")
@@ -16,7 +18,8 @@ var inputAmount = prompt ("How many characters would you like to include in your
 var generateBtn = document.querySelector("#generate");
 var allInputs = [];
 var passwordText = "";
-var tryAgain = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+
+
 // var chosenRangeLower = inputAmount > 7
 // var chosenRangeHigher = inputAmount < 128
 //check inputs//
@@ -31,53 +34,73 @@ if (inputLower ===true) {
   for (var i =0; i<lowercase.length; i++) {
     allInputs.push(lowercase[i])
   }
-};
+  };
 if (inputUpper ===true) {
   for (var i =0; i<uppercase.length; i++) {
   allInputs.push(uppercase[i])};
-};
+  };
 if (inputSpecial === true) {
   for (var i =0; i<specialChar.length; i++) {
   allInputs.push(specialChar[i])};
-};
+  };
 if (inputNumber === true) {
   for (var i =0; i<numeric.length; i++) {
   allInputs.push(numeric[i])};
-};
-//___________________________________________________//
-
-if (inputAmount >= 8) {
-  alert ("Press the RED BUTTON to Generate your PASSWORD");
-};
-if (inputAmount <= 128) {
-  alert ("Press the RED BUTTON to Generate your PASSWORD");
-}
-
-// else if (isNaN(inputAmount));  {
-//   alert ("You must choose a number between 8 and 128");
-//   prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
-//   }
- 
-// else //(inputAmount < 8 || inputAmount > 128); // 
-  else {alert ("You must choose a number between 8 and 128");
-  prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
   };
+//___________________________________________________//
+function number_range(inputAmount) {
+  if ((inputAmount >= 129 && inputAmount <= 7) 
+  || 
+  (isNaN(inputAmout)) 
+  prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");;
+  }
+  var tryAgain = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+  if (inputAmount >7 && inputAmount <129)
+  ||
+  if (tryAgain >7 && tryAgain <129) {
+  return alert ("PRESS THE RED BUTTON \r\n to generate your PASSWORD.");
+ {
+ };
+ inputAmount=Math.floor(inputAmount)
+ inputAmount=number_range;
 
 
-if (tryAgain >= 8) {
-  alert ("Press the RED BUTTON to Generate your PASSWORD");
-};
-if (tryAgain <= 128) {
-  alert ("Press the RED BUTTON to Generate your PASSWORD");
-};
 
 
 
 
 
-// 
-// while (inputAmount < 8 || inputAmount > 128) {
-//   alert ("You must choose a number between 8 and 128");
+
+
+// // if (inputAmount==>7 && inputAmount<129) {
+// //   alert ("Press the RED BUTTON to Generate your PASSWORD");
+// // };
+// if (inputAmount<8 || inputAmount >128) {
+//   alert("You must choose a number between 8 and 128");
+// // prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+// };
+// if (isNaN(inputAmount)) {
+//     alert ("You must choose a number between 8 and 128");
+//     // var tryAgain = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+//     prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+//   };
+//   if (inputAmount==null) {
+//     alert ("You must choose a number between 8 and 128");
+//   // var tryAgain = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+//     prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+//   };
+// //  
+//   if (tryAgain >= 8||tryAgain<=128) {
+//   alert ("Press the RED BUTTON to Generate your PASSWORD");
+//   };
+//   if (tryAgain<8||tryAgain>128) {alert ("You must choose a number between 8 and 128");
+//   prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+//   };
+
+// if (inputAmount==null)  {alert ("You must choose a number between 8 and 128");
+// prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+// };
+
 //   var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
 //   };
 // while (typeof inputAmount !== 'number') {
@@ -92,8 +115,8 @@ console.log(allInputs)
 console.log(inputAmount)
 
 //create function to randomly select characters in final array using a look and Math.random//
-  function generatePassword() {
-     for (var i = 0; i < inputAmount; i++) {
+function generatePassword() {
+  for (var i = 0; i < inputAmount; i++) {
       passwordText += allInputs[Math.floor(Math.random() * inputAmount)] 
       };
       return passwordText;
@@ -108,7 +131,7 @@ function writePassword() {
 };
 var passwordBtn = document.querySelector("#generate");
   passwordBtn.addEventListener("click", function () {
-writePassword ()
+writePassword()
   });
 
 
