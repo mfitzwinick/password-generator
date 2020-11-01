@@ -44,18 +44,43 @@ if (inputNumber === true) {
   for (var i =0; i<numeric.length; i++) {
   allInputs.push(numeric[i])};
 };
+//___________________________________________________//
 
-if (inputAmount < 8 || inputAmount > 128) {
+
+do {
   alert ("You must choose a number between 8 and 128");
-  var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
-}
-if (inputAmount >= 8 || inputAmount <= 128) {
- alert ("Press the RED BUTTON to Generate your PASSWORD");
-}
-if (typeof inputAmount !== 'number') {
+  prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+  }
+while (isNaN(inputAmount));
+
+
+do {
   alert ("You must choose a number between 8 and 128");
-  var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
-}
+  prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+  }
+while (inputAmount < 8 || inputAmount > 128);
+
+if (inputAmount >= 8) {
+  alert ("Press the RED BUTTON to Generate your PASSWORD");
+};
+if (inputAmount <= 128) {
+  alert ("Press the RED BUTTON to Generate your PASSWORD");
+};
+
+
+
+
+
+// 
+// while (inputAmount < 8 || inputAmount > 128) {
+//   alert ("You must choose a number between 8 and 128");
+//   var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+//   };
+// while (typeof inputAmount !== 'number') {
+//   alert ("You must choose a number between 8 and 128");
+//   var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
+// };
+
 
 //check final array//
 console.log(allInputs)
