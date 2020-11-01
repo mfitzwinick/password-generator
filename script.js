@@ -50,19 +50,21 @@ if (inputNumber === true) {
 //___________________________________________________//
 function number_range(inputAmount) {
   if ((inputAmount >= 129 && inputAmount <= 7) 
-  || 
-  (isNaN(inputAmout)) 
-  prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");;
+  // || 
+  // (isNaN(inputAmout)) {
+  {
+    prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");;
   }
   var tryAgain = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
   if (inputAmount >7 && inputAmount <129)
   ||
   if (tryAgain >7 && tryAgain <129) {
   return alert ("PRESS THE RED BUTTON \r\n to generate your PASSWORD.");
- {
+  };
  };
  inputAmount=Math.floor(inputAmount)
- inputAmount=number_range;
+ tryAgain=Math.floor(tryAgain);
+ number_range (inputAmount);
 
 
 
