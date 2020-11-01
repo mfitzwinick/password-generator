@@ -18,7 +18,7 @@ var allInputs = [];
 var passwordText = "";
 
 var chosenRangeLower = inputAmount > 7
-var chosenRangeHigher = inputAmount <128
+var chosenRangeHigher = inputAmount < 128
 //check inputs//
 console.log(inputLower)
 console.log(inputUpper)
@@ -45,16 +45,19 @@ if (inputNumber === true) {
   allInputs.push(numeric[i])};
 };
 
-if (inputAmount!== chosenRangeLower || inputAmount!== chosenRangeHigher) {
+if (inputAmount < 8 || inputAmount > 128) {
   alert ("You must choose a number between 8 and 128");
   var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
-};
-if (inputAmount<8||inputAmount >128) {
+}
+if (inputAmount >= 8 || inputAmount <= 128) {
+ alert ("Press the RED BUTTON to Generate your PASSWORD");
+}
+if (typeof inputAmount !== 'number') {
   alert ("You must choose a number between 8 and 128");
   var inputAmount = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
-};
- 
- //check final array//
+}
+
+//check final array//
 console.log(allInputs)
 //check prompt//
 console.log(inputAmount)
@@ -65,7 +68,7 @@ console.log(inputAmount)
       passwordText += allInputs[Math.floor(Math.random() * inputAmount)] 
       };
       return passwordText;
-      alert ("Press the RED BUTTON to Generate your PASSWORD")
+      
     };
 
 // // Write password to the #password input div //
