@@ -56,38 +56,37 @@ if (inputNumber === true) {
 //     alert ("PRESS the Red Button to generate your PASSWORD")
 //   }
 
+//   number_range (inputAmount);
+
 //   function number_range2(tryAgain) {
 //     tryAgain=Math.floor(tryAgain);
 //     var tryAgain = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
 //   if (tryAgain >7 && tryAgain<129)
 //   // ||
-//   // if (tryAgain >7 && tryAgain <129) {
+//   if (tryAgain >7 && tryAgain <129) {
 //   alert ("PRESS THE RED BUTTON \r\n to generate your PASSWORD.");
 //   };
 
-
-
-//  number_range (inputAmount);
 //  number_range2 (tryAgain);
 
-    if (inputAmount >7 && inputAmount < 129) {
-      alert("Press the RED BUTTON to Generate your PASSWORD");
-    }
-    else {
-      prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
-  };
-      
-  // var tryAgain = prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
-  while (tryAgain) {
-    var inputAmount = prompt("How many characters would you like to include in your passoword? ");
-    if (inputAmount < 8 || inputAmount > 128) {
-      alert("You must choose a number between 8 and 128");
-    }
-    else {
-      alert("Press the RED BUTTON to Generate your PASSWORD");
-      break;
-    };
+if (inputAmount > 7 && inputAmount < 129) {
+    alert("Press the RED BUTTON to Generate your PASSWORD")
+    } 
+else {
+    prompt("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length."
+      )
   }
+// if (tryAgain= prompt("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.")
+//   && (tryAgain > 7 && tryAgain < 129)) {
+//       alert("Press the RED BUTTON to Generate your PASSWORD")
+//     }
+//     else {
+//       prompt("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length."
+//         )
+//     }
+    
+
+  
 
 // if (isNaN(inputAmount)) {
 //     alert ("You must choose a number between 8 and 128");
@@ -126,19 +125,18 @@ console.log(inputAmount)
 
 //create function to randomly select characters in final array using a look and Math.random//
 function generatePassword() {
-  for (var i = 0; i < inputAmount; i++) {
-      passwordText += allInputs[Math.floor(Math.random() * inputAmount)] 
-      };
-      return passwordText;
-      
+for (var i = 0; i < inputAmount; i++) {
+    passwordText += allInputs[Math.floor(Math.random() * inputAmount)] 
     };
+    return passwordText;
+      };
 
 // // Write password to the #password input div //
 function writePassword() {
-  var password = generatePassword();
-  var passwordFinal = document.querySelector("#password");
-  passwordFinal.value = password;
-
-var passwordBtn = document.querySelector("#generate");
-passwordBtn.addEventListener(("click", writePassword()
+var password = generatePassword();
+var passwordFinal = document.querySelector("#password");
+passwordFinal.value = password;
 };
+var passwordBtn = document.querySelector("#generate");
+passwordBtn.addEventListener("click", writePassword);
+
