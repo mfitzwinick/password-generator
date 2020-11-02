@@ -138,7 +138,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordFinal = document.querySelector("#password");
   passwordFinal.value = password;
-};
-var passwordBtn = document.querySelector("#generate");
-passwordBtn.addEventListener("click", writePassword)
 
+var passwordBtn = document.querySelector("#generate");
+passwordBtn.addEventListener(("click", writePassword()
+};
