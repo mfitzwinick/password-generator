@@ -9,14 +9,19 @@ var specialChar = ['@','%','+',"\\",'/',"'",'!','#','$','^','?',':',',',')','(',
 //welcome employee//
 alert ("Thank you for using Password Generator!\r\nPlease answer the following questions:")
 
-//create variables for inputs with confirms and prompt//
+//create a function with a recursive loop for prompt input//
 var inputAmount = prompt ("How many characters would you like to include in your password (must be between 8 and 128")
+inputCheck(inputAmount)
+function inputCheck(amount) {
+  if(amount >=8 && amount <=128) {
+    return inputAmount = amount
+  } else {
+    alert("Your number must be between 8 and 128") 
+    return inputCheck(amount = prompt("How many characters would you like to include in your password (must be between 8 and 128"))
+  }
+}
 
-while (inputAmount >= 129 || inputAmount <= 7) {
-  var tryAgain=prompt ("TRY AGAIN!! \r\n Remember, your password must be between 8 and 128 characters in length.");
-if (tryAgain >7 && tryAgain <129) {
-  break;}}
-if (inputAmount >7 && inputAmount <129) {}
+//create variables for confirms//
 var inputLower = confirm("Would you like lower case letters in your password?")
 var inputUpper = confirm("Would you like upper case letters in your password?")
 var inputSpecial = confirm("Would you like special characters in your password?")
