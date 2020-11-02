@@ -16,7 +16,7 @@ All files are nested in the password-generator file.  The index.html is a file t
 
 Given the relatively short amount of time we spent on javascript, I was not sure if I would be able to complete the project; however,  after drilling in, I felt an immense sense of accomplishment once I was able to get most of the project to work.  It took some time to think through the pseudo code, and I look forward to future exercises that will help me build those muscles. That may have been the most important lesson I gleaned from this project. Once I had the psuedo code in place, the execution began with some ease.   I was able to build out the variales and my "if" statements, and checked the logic in the console log.  Most of the "if" statements were straightforward, but I had to really think about the prompt input differently than the confirms.  
 
-The prompt was by far the most difficult thing to work with.  I tried numerous iterations, and never really got to where I wanted the code to go.  I think because I included two prompts, I found it difficult to get the second prompt to behave in a way I was happy with.  I tried loops and functions, but nothing really worked the way I had hoped, so I pared it down to just a simple alert and prompt.  There are numerous things that I would have liked to better address, but my skill level isn't there yet.
+The prompt was by far the most difficult thing to work with.  I tried numerous iterations, and never really got to where I wanted the code to go.  I think because I included two prompts, I found it difficult to get the second prompt to behave in a way I was happy with. I wanted the second prompt to override the first within the set parameters, but I couldn't figure out how to do that. There are numerous things that I would have liked to better address, but my skill level isn't there yet.
 
 I enjoyed manipulating the arrays, and look forward to working with arrays now that I see the power of using them. I was pleased when the code worked that pushed the selected arrays into a new empty array.  Although I have a grasp of the for loop and Math.random piece, it took several tries to get it right.  For the final function, I was helped along with the provided content, but I need to re-review that to really get a solid grasp going forward.
 
@@ -29,4 +29,4 @@ Both the html and css files were provided by Bryan Swarthout at UCLA Extension. 
 
 # Acknowledgments
 
-I'd like to thank Bryan Swarthout and Wilson Lam at UCLA.  In particular, Bryan was extremely helpful in getting me through the functions on this project.
+I'd like to thank Bryan Swarthout and Wilson Lam at UCLA.  In particular, Bryan was extremely helpful in getting me through the functions on this project, and William helped me with re-thinking my logic.  Thanks also to Alex S and Nate.
